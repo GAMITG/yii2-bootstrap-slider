@@ -1,0 +1,27 @@
+{
+    "name": "andrew72ru/yii2-bootstrap-slider",
+    "description": "Slider to choose a digit range",
+    "type": "yii2-extension",
+    "keywords": ["yii2","extension","bootstrap","slider"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "andrew72ru",
+            "email": "andrew72ru@gmail.com"
+        }
+    ],
+    "require": {
+        "yiisoft/yii2": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "andrew72ru\\slider\\": ""
+        }
+    },
+    "extra": {
+        "asset-installer-paths": {
+            "npm-asset-library": "vendor/npm",
+            "bower-asset-library": "vendor/bower"
+        }
+    }
+}
