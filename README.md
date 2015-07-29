@@ -1,6 +1,6 @@
 Yii2 Bootstrap Slider
 =====================
-Slider to choose a digit range
+Slider to choose a number range. Based on [seiyria/bootstrap-slider](https://github.com/seiyria/bootstrap-slider)
 
 Installation
 ------------
@@ -26,6 +26,3 @@ Usage
 -----
 
 Once the extension is installed, simply use it in your code by  :
-
-```php
-<?= \andrew72ru\slider\AutoloadExample::widget(); ?>```
