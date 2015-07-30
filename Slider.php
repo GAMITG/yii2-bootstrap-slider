@@ -5,7 +5,6 @@ namespace andrew72ru\slider;
 use andrew72ru\slider\assets\SliderAsset;
 use yii\helpers\ArrayHelper;
 use yii\helpers\Html;
-use yii\helpers\VarDumper;
 use yii\widgets\InputWidget;
 
 /**
@@ -41,6 +40,6 @@ class Slider extends InputWidget
 
     public function run()
     {
-        return Html::tag('div', Html::textInput($this->name, null, $this->options), ['class' => 'form-group']);
+        return Html::tag('div', Html::textInput(Html::getInputName($this->model, $this->attribute), null, $this->options), ['class' => 'form-group']);
     }
 }
