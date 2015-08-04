@@ -40,7 +40,7 @@ class Slider extends InputWidget
             $this->step = 1;
 
         SliderAsset::register($this->view);
-        $this->view->registerCss(".slider.slider-horizontal{width: 100%;}");
+        $this->view->registerCss(".slider.slider-horizontal{width: 90%;}");
         $this->options['class'] = ArrayHelper::getValue($this->options, 'class', 'form-control');
         $this->options['id'] = $this->id;
         $this->options['data'] = [
@@ -58,6 +58,6 @@ class Slider extends InputWidget
     public function run()
     {
 //        $this->view->registerJs("console.log(" . Json::encode(VarDumper::dumpAsString($this->value2)) . ")");
-        return Html::tag('div', Html::textInput(Html::getInputName($this->model, $this->attribute), null, $this->options), ['class' => 'form-group']);
+        return Html::tag('div', Html::textInput(Html::getInputName($this->model, $this->attribute), null, $this->options), ['class' => 'form-group text-center']);
     }
 }
