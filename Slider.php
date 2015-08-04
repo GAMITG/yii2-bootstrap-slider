@@ -19,6 +19,7 @@ class Slider extends InputWidget
     public $value1;
     public $value2;
     public $step;
+    public $tick_unit = null;
 
     public function init()
     {
@@ -46,6 +47,8 @@ class Slider extends InputWidget
             'slider-min' => $this->min,
             'slider-max' => $this->max,
             'slider-step' => $this->step,
+            'slider-ticks' => [$this->min, $this->max],
+            'slider-ticks-labels' => [$this->min . ' ' . $this->tick_unit, $this->max . ' ' . $this->tick_unit],
             'slider-value' => [(int)$this->value1, (int)$this->value2]
         ];
 
