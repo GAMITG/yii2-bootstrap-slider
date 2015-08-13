@@ -27,14 +27,27 @@ Usage
 
 Once the extension is installed, simply use it in your code by  :
 
+For more information, please visit [seiyria/bootstrap-slider](https://github.com/seiyria/bootstrap-slider).
+
 ```php
 $form->field($model, 'property')
     ->widget(\andrew72ru\slider\Slider::className(), [
-        'min'       => 100,     // Find min value form you model if you want
-        'max'       => 1000,    // Find max value form you model if you want
-        'value1'    => 150,     // Optional, value to first slider init. Refer to min if not set
-        'value2'    => 350,     // Optional, value to second slider init. Refer to max if not set
-        'step'      => 1,       // Optional, refer to 1 if not set
+        'min'           => 100,     // Find min value form you model if you want
+        'max'           => 1000,    // Find max value form you model if you want
+        'value1'        => 150,     // Optional, value to first slider init. Refer to min if not set
+        'value2'        => 350,     // Optional, value to second slider init. Refer to max if not set
+        'step'          => 1,       // Optional, refer to 1 if not set,
+        'options'       => [
+            // Avaliable all seiyria/bootstrap-slider options
+        ]
+        'clientEvents'  => [
+            'slide' => 'function(e) {console.log(e)}',
+            'slideStart' => 'function(e) {console.log(e)}',
+            'slideStop' => 'function(e) {console.log(e)}',
+            'change' => 'function(e) {console.log(e)}',
+            'slideEnabled' => 'function(e) {console.log(e)}',
+            'slideDisabled' => 'function(e) {console.log(e)}',
+        ]
     ])
 ```
 
